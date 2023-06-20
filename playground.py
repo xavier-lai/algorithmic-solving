@@ -1,14 +1,3 @@
-# algorithmic-solving
-
-Algorithmic solving in python
-
-## I - Data Structure
-
-### HashTable
-
-Hashtable is already implemented in python with Dict. Insert, Get or Delete operation inside a HashTable is a complexity of O(1)
-
-```python
 from src.data_structure import HashTable
 
 if __name__ == "__main__":
@@ -19,4 +8,3 @@ if __name__ == "__main__":
     print(hash_table.hash_list)
     hash_table.delete_key("my_key")
     print(hash_table.hash_list)
-```

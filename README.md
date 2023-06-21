@@ -86,3 +86,19 @@ if __name__ == "__main__":
     print(f"Found at {index}")
     print(search_all_occurances(58, any_list))
 ```
+
+## III - Sort
+
+### Bubble sort
+
+Compare each value and permute the greteast element with the next one until all elements are sorted. The complexity is around O(n²)
+
+```python
+from src.sort import bubble_sort
+
+if __name__ == "__main__":
+    any_int_list = [10, 25, 0, 4, 3, 102, 356, 1000, 3, 0, 0, 5]
+    already_sorted_list = sorted(any_int_list)
+    print(bubble_sort(any_int_list))
+    print(bubble_sort(already_sorted_list))
+```

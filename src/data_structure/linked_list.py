@@ -1,4 +1,6 @@
-from typing import Optional, Any, List
+from typing import Any, List, Optional
+
+from ..decorators import time_it
 
 
 class LinkedList:
@@ -86,6 +88,31 @@ class LinkedList:
             current_node = current_node.next
             current_index += 1
         current_node = current_node.next  # in case it's the last index
+
+    @time_it
+    def reverse(self):
+        if self.head is None:
+            return
+
+        previous_node = None
+        current_node = self.head
+        while current_node is not None:
+            tmp_next_node = current_node.next
+            current_node.next = previous_node
+            previous_node = current_node
+            current_node = tmp_next_node
+
+        self.head = previous_node
+
+    @time_it
+    def reverse_recursive(self, current_node, previous_node=None):
+        if current_node is None:
+            self.head = previous_node
+            return
+
+        next_node = current_node.next
+        current_node.next = previous_node
+        self.reverse_recursive(next_node, current_node)
 
 
 class Node:

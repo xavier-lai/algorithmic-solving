@@ -66,3 +66,23 @@ if __name__ == "__main__":
     binary_search_tree.delete_value(50)
     print(binary_search_tree.sort_ascending())
 ```
+
+## II - Search
+
+### Binary Search
+
+Binary search search in a O(log(n)) time complexity in an array. The array must be sorted
+
+```python
+from src.search import binary_search, binary_search_recursive, search_all_occurances
+
+if __name__ == "__main__":
+    any_list = sorted([0, 5, 410, 58, 58, 58, 65, 12, 0, 112, 53, 120, 568, 5])
+    print(any_list)
+    print(binary_search(120, any_list))
+    index = binary_search_recursive(
+        120, any_list, lower_bound_index=0, upper_bound_index=len(any_list)
+    )
+    print(f"Found at {index}")
+    print(search_all_occurances(58, any_list))
+```

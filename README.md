@@ -69,6 +69,9 @@ if __name__ == "__main__":
     print(binary_search_tree.sort_ascending())
     binary_search_tree.delete_value(50)
     print(binary_search_tree.sort_ascending())
+    binary_search_tree.display_tree("initial-tree")
+    binary_search_tree.invert()
+    binary_search_tree.display_tree("inverted-tree")
 ```
 
 ## II - Search

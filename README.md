@@ -42,3 +42,27 @@ if __name__ == "__main__":
     linked_list.insert_at(1000000, linked_list.get_length())
     linked_list.show()
 ```
+
+### Binary Search Tree
+
+Binary search tree is a general tree where each node has at most 2 child nodes. All values lower than current node value are in the sub-left tree and all values greater than the current node value are in the sub-right tree.
+
+The time complexity of searching and sorting with a BinarySearchTree is O(log(n))
+
+```python
+from src.data_structure import build_tree
+
+if __name__ == "__main__":
+    int_list = [100, 50, 150, 200, 1000, 20, 60, 45, 5, 25, 6]
+    binary_search_tree = build_tree(int_list)
+    print(binary_search_tree.sort_ascending())
+    print(binary_search_tree.search(2))
+    print(binary_search_tree.search(1023))
+    print(binary_search_tree.find_max())
+    print(binary_search_tree.find_min())
+    print(binary_search_tree.compute_sum())
+    print(binary_search_tree.sort_descending())
+    print(binary_search_tree.sort_ascending())
+    binary_search_tree.delete_value(50)
+    print(binary_search_tree.sort_ascending())
+```

@@ -134,3 +134,12 @@ from src.current_problem import get_fibonacci_list
 if __name__ == "__main__":
     print(get_fibonacci_list(1000))
 ```
+
+### Greateast common diviser
+
+```python
+from src.current_problem import find_gcd
+
+if __name__ == "__main__":
+    print(find_gcd(124553, 124553))
+```

@@ -102,3 +102,15 @@ if __name__ == "__main__":
     print(bubble_sort(any_int_list))
     print(bubble_sort(already_sorted_list))
 ```
+
+### Quick sort
+
+Sort by sorting partitions. The time complexity is at the worst O(n²) and at the best O(nlog(n)).
+
+```python
+from src.sort import quick_sort
+
+if __name__ == "__main__":
+    any_int_list = [0, 20, 1, 542, 3, 6, 7, 89, 2, 0, 0, 12, 6]
+    print(quick_sort(any_int_list))
+```

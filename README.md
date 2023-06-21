@@ -41,6 +41,10 @@ if __name__ == "__main__":
     linked_list.show()
     linked_list.insert_at(1000000, linked_list.get_length())
     linked_list.show()
+    linked_list.reverse()
+    linked_list.show()
+    linked_list.reverse_recursive(linked_list.head)
+    linked_list.show()
 ```
 
 ### Binary Search Tree

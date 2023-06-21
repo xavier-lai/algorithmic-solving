@@ -121,3 +121,16 @@ if __name__ == "__main__":
     any_int_list = [0, 20, 1, 542, 3, 6, 7, 89, 2, 0, 0, 12, 6]
     print(quick_sort(any_int_list))
 ```
+
+## IV - Common algorithm problem
+
+### Fibonacci
+
+Recursive will lead to O(n²) and iterative dynamic programming will lead to O(n)
+
+```python
+from src.current_problem import get_fibonacci_list
+
+if __name__ == "__main__":
+    print(get_fibonacci_list(1000))
+```

@@ -129,7 +129,7 @@ class BinarySearchTree:
 
         return self
 
-    def invert(self):
+    def invert_recursive(self):
         if self.data is None:
             return
 
@@ -140,6 +140,19 @@ class BinarySearchTree:
 
         if self.right is not None:
             self.right.invert()
+
+    def invert(self):
+        if self.data is None:
+            return
+
+        next_tree_list = [self]
+        while len(next_tree_list) > 0:
+            node = next_tree_list.pop()
+            if node is not None:
+                node.left, node.right = node.right, node.left
+                next_tree_list.append(node.left)
+                next_tree_list.append(node.right)
+        return self
 
 
 def build_tree(any_list: List[Any]):

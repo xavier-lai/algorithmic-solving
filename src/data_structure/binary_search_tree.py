@@ -1,5 +1,7 @@
 from typing import Any, List
 
+from graphviz import Digraph
+
 
 class BinarySearchTree:
     def __init__(self, data: Any):
@@ -22,6 +24,28 @@ class BinarySearchTree:
                 self.right.add_child_node(data)
             else:
                 self.right = BinarySearchTree(data)
+
+    def display_tree(self, tree_name: str):
+        dot = Digraph()
+        dot.attr("node", shape="circle")
+
+        def add_edges(node):
+            if node is None:
+                return
+
+            dot.node(str(node.data))
+
+            if node.left is not None:
+                dot.edge(str(node.data), str(node.left.data), label="L")
+                add_edges(node.left)
+
+            if node.right is not None:
+                dot.edge(str(node.data), str(node.right.data), label="R")
+                add_edges(node.right)
+
+        add_edges(self)
+
+        dot.render(f"{tree_name}.gv", format="png", view=True)
 
     def sort_ascending(self) -> List[Any]:
         sorted_list = []
@@ -104,6 +128,18 @@ class BinarySearchTree:
             self.left = self.left.delete_value(max_value_from_left_tree_to_duplicate)
 
         return self
+
+    def invert(self):
+        if self.data is None:
+            return
+
+        self.left, self.right = self.right, self.left
+
+        if self.left is not None:
+            self.left.invert()
+
+        if self.right is not None:
+            self.right.invert()
 
 
 def build_tree(any_list: List[Any]):

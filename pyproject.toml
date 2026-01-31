@@ -1,0 +1,7 @@
+[project]
+name = "algorithmic-solving"
+version = "0.1.0"
+description = "Algorithm solving and Leetcode problems"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []

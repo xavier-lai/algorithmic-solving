@@ -121,4 +121,3 @@ if __name__ == "__main__":
     any_int_list = [0, 20, 1, 542, 3, 6, 7, 89, 2, 0, 0, 12, 6]
     print(quick_sort(any_int_list))
 ```
- 
